@@ -156,6 +156,7 @@ function gameStartFunc() {
                 },2000) 
             }).then(()=>{
                 if(player.getDeathCheck()===false){
+                    gridDivArr.forEach((e)=>e.setAttribute('canmove',0));
                     Modal('Your turn','#F0A036');
                     player.turnStaminaRecovery();
                     turnModal.style.display='none'
