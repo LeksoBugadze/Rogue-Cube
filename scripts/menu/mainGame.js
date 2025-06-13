@@ -353,7 +353,7 @@ function gameStartFunc() {
                 
                 if(enemy.charged){
                     const attackDiv=document.createElement('div');
-                    attackDiv.style.backgroundImage='url("/assets/Art/playerPlaceholder-sheet.png")';
+                    attackDiv.style.backgroundImage='url("/assets/Art/PlayerPlaceholder-sheet.png")';
                     attackDiv.style.backgroundRepeat='no-repeat';
                     attackDiv.style.position='absolute';
                     attackDiv.style.zIndex=3;
