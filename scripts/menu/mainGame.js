@@ -24,7 +24,8 @@ turnModal.style.display='block';
 let moved=false;
 let clickedMove=false;
 
-
+let moveToggle=false;
+let attackToggle=false;
 
 
 let playerLocX=0;
@@ -176,7 +177,7 @@ function gameStartFunc() {
     let clicked=false;
     attack.addEventListener('click',()=>{
        renderGrid();            
-            
+     
         if(spawnVar.spawn){
             if(player.getCurrentStamina()>=5){
                 const playerX=parseInt(document.querySelector('.player').parentElement.getAttribute('data-row'));
@@ -222,47 +223,47 @@ function gameStartFunc() {
 
     move.addEventListener('click', () =>{
         renderGrid();
-       if(!clickedMove){
-        
-        if(spawnVar.spawn){
-            if(player.getCurrentStamina()>=2){
-                clickedMove=true;
-                gridDivArr.forEach((element, index) => {
+        clickedMove=!clickedMove;
+       if(clickedMove){
+            if(spawnVar.spawn){
+                if(player.getCurrentStamina()>=2){
+                    clickedMove=true;
+                    gridDivArr.forEach((element, index) => {
 
-                    Movment(gridDivArr,element,index,'.player','yellow');
-                    
-                    element.addEventListener('click',()=>{
+                        Movment(gridDivArr,element,index,'.player','yellow');
                         
-                        if(element.getAttribute('canMove')==='1'){
+                        element.addEventListener('click',()=>{
                             
-                            let newPX=element.getAttribute('data-row');
-                            let newPY=element.getAttribute('data-column');
-                            let {oldPX,oldPY}=updatePlayerLoc();
-                            
-                            player.movePlayer(oldPX,oldPY,newPX,newPY,grid)
-                            player.staminaUse(2);
-                            clickedMove=false;
-                            
-                            
-                            gridDivArr.forEach((element)=>{
-                                element.setAttribute('canMove','0')
-                                element.querySelector('img'); 
+                            if(element.getAttribute('canMove')==='1'){
+                                
+                                let newPX=element.getAttribute('data-row');
+                                let newPY=element.getAttribute('data-column');
+                                let {oldPX,oldPY}=updatePlayerLoc();
+                                
+                                player.movePlayer(oldPX,oldPY,newPX,newPY,grid)
+                                player.staminaUse(2);
+                                clickedMove=false;
+                                
+                                
+                                gridDivArr.forEach((element)=>{
+                                    element.setAttribute('canMove','0')
+                                    element.querySelector('img'); 
 
-                                if(element.querySelector('.move-tile')){
-                                    element.querySelector('.move-tile').remove();
-                                }  
-                            })
-                        }
-                                    
-                    });   
-                    
-                });
-            }else errorWindow(userInterface,"You don't have enough stamina")
-            
-            
-        }else {
-            errorWindow(userInterface,'Place your character');
-        }
+                                    if(element.querySelector('.move-tile')){
+                                        element.querySelector('.move-tile').remove();
+                                    }  
+                                })
+                            }
+                                        
+                        });   
+                        
+                    });
+                }else errorWindow(userInterface,"You don't have enough stamina")
+                
+                
+            }else {
+                errorWindow(userInterface,'Place your character');
+            }
        } 
         
         
