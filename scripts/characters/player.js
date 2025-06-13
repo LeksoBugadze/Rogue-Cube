@@ -85,8 +85,9 @@ export class Player{
 
     increaseMight(param){
         this.#might+=param;
+        document.getElementById('Might').value=this.#might;
         this.calcDmg();
-        return this.#damage;
+        return this.#might;
     }
 
     increaseStamina(param){
