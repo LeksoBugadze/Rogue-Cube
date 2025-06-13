@@ -9,7 +9,9 @@ const rows=6;
 const cols=7;
 let chest=false;
 let clicked=false;
-export let room=0;
+let room=0;
+
+
 let spawnVar={
     spawn:false
 }
@@ -29,53 +31,13 @@ let grid=[
     ['spawn','spawn','spawn','spawn','spawn','spawn','spawn'],
 ]
 
+
 function setGrid(newGrid){
     grid=newGrid;
 }
 
 function secondPhase(){
     setGrid(maps[maps.length-1]);
-    renderGrid();
-
-    const createEnemy1=new Enemy({
-        type:'melee',
-        x:1,
-        y:1,
-        health:30,
-        damage:10
-    });
-
-    enemyArr.push(createEnemy1);
-
-    const createEnemy2=new Enemy({
-        type:'melee',
-        x:2,
-        y:2,
-        health:30,
-        damage:10
-    });
-
-    enemyArr.push(createEnemy2);
-
-    const createEnemy3=new Enemy({
-        type:'melee',
-        x:1,
-        y:5,
-        health:30,
-        damage:10
-    });
-
-    enemyArr.push(createEnemy3);
-
-    const createEnemy4=new Enemy({
-        type:'melee',
-        x:2,
-        y:4,
-        health:30,
-        damage:10
-    });
-
-    enemyArr.push(createEnemy4);
 
     const element=document.querySelector(`[data-row="5"][data-column="3"]`);
 
@@ -281,6 +243,7 @@ function renderGrid(){
             
         }
     }
+
     
     enemyArr.forEach(enemy=>{
         const enemySprite=enemy.getSprite();
@@ -293,6 +256,7 @@ function renderGrid(){
             enemyHealth.style.display='none';
         })
     })
+    
 }
 
-export{renderGrid,generateMapOnGrid,createGrid,grid,enemyArr,chest,spawnVar,gridDivArr,secondPhase};
+export{renderGrid,generateMapOnGrid,createGrid,grid,enemyArr,chest,spawnVar,gridDivArr,secondPhase,room};

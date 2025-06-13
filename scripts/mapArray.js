@@ -39,8 +39,8 @@ export const maps=[
         ['spawn','spawn','spawn','spawn','spawn','spawn','spawn'],
     ],[
         ['empty','empty','empty','boss','empty','empty','empty'],
-        ['empty','enemy','empty','empty','empty','enemy','empty'],
-        ['empty','empty','enemy','empty','enemy','empty','empty'],
+        ['empty','empty','empty','empty','empty','empty','empty'],
+        ['empty','empty','empty','empty','empty','empty','empty'],
         ['empty','empty','empty','empty','empty','empty','empty'],
         ['empty','empty','empty','empty','empty','empty','empty'],
         ['empty','empty','empty','player','empty','empty','empty'],

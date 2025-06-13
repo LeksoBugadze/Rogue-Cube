@@ -167,7 +167,6 @@ function gameStartFunc() {
             turnFucntion(enemyArr,1500);      
         }else {
            Modal('Room cleared','#F0A036');
-            
         }
       }else {
         errorWindow(userInterface,'Place your character');
