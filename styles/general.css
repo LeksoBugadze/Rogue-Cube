@@ -1,0 +1,61 @@
+*{
+    font-family: "Tiny5", sans-serif;
+    
+}
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #2f2839;
+    box-shadow: none;
+    transition: box-shadow ,0.2s;
+}
+
+p{
+    margin: 0;
+}
+
+button{
+    cursor: pointer;
+}
+
+.finish-game{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.8);
+    color: #F0A036;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.finish-game div{
+    display: flex;
+    flex-direction: column;
+    background-color: #2f2839;
+    padding: 3rem;
+}
+
+.finish-game div h1,h2{
+    text-align: center;
+}
+
+.finish-game div button{
+    font-size: 1.5rem;
+    border: 3px solid #545e72;
+    background-color: #464459;
+    color: #c5d2ce;
+    padding: 0.5rem;
+}
+
+.finish-game div a{
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    border: 3px solid #545e72;
+    background-color: #464459;
+    color: #c5d2ce;
+    text-align: center;
+    text-decoration: none;
+}

@@ -1,0 +1,161 @@
+.character-creation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 100vh;
+}
+
+.wrapper-character-creation{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.character-creation label{
+    color: #d3d8d9;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.inner-div button{
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    color: #c5d2ce;
+    font-size: 30px;
+    border: 2px solid #545e72;
+    font-weight: 700;
+    transition: all 0.2s;
+}
+
+.character-creation button:active{
+    background-color: #545e72;
+    color: white;
+}
+
+.inner-div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.character-creation .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.character-creation input{
+    font-size: 30px;
+    border-left: none;
+    border-right: none;
+    border-top: 2px solid #545e72;
+    border-bottom: 2px solid #545e72;
+    text-align: center;
+    background-color: transparent;
+    color: #c5d2ce;
+    height: 45px;
+}
+
+.character-creation p{
+    font-size: 50px;
+    color: #d3d8d9;
+}
+
+.skill-points{
+    transition: all 0.2s;
+}
+
+.finish{
+    font-size: 35px;
+    padding: 5px 30px;
+    background-color: #464459;
+    border: 4px solid #545e72;
+    color:#c5d2ce;
+    margin-top: 50px;
+    transition: all 0.2s;
+}
+
+.finish:hover{
+    font-size: 38px;
+}
+
+.finish:active{
+    margin-top:55px;
+}
+
+
+@media (min-width:0px)and (max-width:541px){
+    .character-creation{
+        width: 150px;
+    }
+    .character-creation input {
+        font-size: 15px;
+        height: 25px;
+    }
+    .character-creation label{
+        font-size:20px;
+    }
+    .inner-div button {
+        width: 30px;
+        height: 30px;
+        font-size:15px;
+    }
+    .character-creation p {
+        font-size: 20px;
+    }
+    .finish{
+        font-size: 20px;
+        border: 2px solid #545e72;
+        padding:5px 40px;
+    }
+    
+    .finish:hover{
+        font-size: 25px;
+    }
+}
+
+@media (min-width:541px)and (max-width:1000px){
+    .character-creation{
+        width:100%;
+    }
+    
+}
+
+@media (min-width:1001px)and (max-width:1800px){
+    .character-creation{
+        width: 300px;
+    }
+    .character-creation input {
+        font-size: 25px;
+        height: 35px;
+    }
+    .character-creation label{
+        font-size:25px;
+    }
+    .inner-div button {
+        width: 40px;
+        height: 40px;
+        font-size:25px;
+    }
+    .character-creation p {
+        font-size: 35px;
+    }
+    .finish{
+        font-size:25px;
+        border: 2px solid #545e72;
+        padding:5px 90px;
+    }
+    
+    .finish:hover{
+        font-size: 35px;
+    }
+    
+}
+
+
+

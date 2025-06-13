@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rogue Cube</title>
+    <script type="module" src="/scripts/index.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="assets/Art/icon.png">
+
+    <link rel="stylesheet" href="/styles/general.css">
+    <link rel="stylesheet" href="/styles/gameBoard.css">
+    <link rel="stylesheet" href="/styles/character-creation.css">
+    <link rel="stylesheet" href="/styles/userIterface.css">
+    <link rel="stylesheet" href="styles/settings.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Pixelify+Sans:wght@400..700&family=Tiny5&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="wrapper">
+        
+        <audio class="OST" src="/assets/Sound/OST.mp3" loop></audio>
+        <audio class="Battle-OST" src="/assets/Sound//BattleOST.m4a" loop></audio>
+        <audio class="hit-sound" src="/assets/Sound/Hit-Sound.wav" ></audio>
+        <audio class="menu-sound" src="/assets/Sound/Button-sound.mp3"></audio>
+        <audio class="charging" src="assets/Sound/charging-spell.wav"></audio>
+        <audio class="spell" src="assets/Sound/rangeAttack-sound.wav"></audio>
+        <audio class="fire" src="assets/Sound/fire.mp3"></audio>
+        
+        <div class="victory-modal">
+        
+        </div>
+        <div class="btn-container">
+            <button class="settings-container"><img src="/assets/Art/Settings.png" alt="settings" class="settings"></button>
+            <button class="settings-container"><img src="/assets/Art/Audio-OFF.png" alt="settings" class="audio"></button>
+        </div>
+        <div class="game">
+
+            <div class="buttons-div">
+                <h1 class="title">ROGUE CUBE</h1>
+                <button class="start">Start Game</button>
+            </div>
+            <div class="settings-div">
+                <div>
+                    <label for="audio-range-input-OST">Background music</label>
+                    <div class="input-container">
+                        <input type="range" id="audio-range-input-OST"min="0" max="100">
+                        <div class="input1-value">50%</div>
+                    </div> 
+                </div>
+                <div>
+                    <label for="audio-range-input-sfx">Sound effects</label>
+                    <div class="input-container">
+                        <input type="range" id="audio-range-input-sfx" min="0" max="100">
+                        <div class="input2-value">50%</div>
+                    </div>
+                </div>
+                <div>
+                    <label for="audio-range-input-menu">Menu sounds</label>
+                    <div class="input-container">
+                        <input type="range" id="audio-range-input-menu" min="0" max="100">
+                        <div class="input3-value">50%</div>
+                    </div>
+                </div>
+                <button class="close-settings">Close</button>
+            </div>
+            <div class="level-rewards">
+                
+            </div>
+            <div class="item-rewards">
+                
+            </div>
+            <div class="div-container">
+                
+                <div class="grid">
+                </div>
+            </div>
+            
+            <div class="UI">
+                <div class="turn-modal"></div>
+                <div class="character-stats">
+                    
+                </div>
+                <div class="wrapper">
+                    <div class="enemy-heath-container">
+                    </div>
+                    <div class="health-player"></div>
+                    <div class="stamina"></div>
+                    <div class="error"></div>
+                    <div class="ui-buttons">
+                        <button class="attack">Attack</button>
+                        <button class="move">Move</button>
+                        <button class="turn">End Turn</button>
+                    </div> 
+            </div>
+        </div>
+        <div class="death-screen">
+            <p class="death">YOU ARE DEAD</p>
+        </div>
+    </main>
+    <div class="wrapper-character-creation">
+        <div class="character-creation">
+            <p>Skill points: <span class="skill-points"></span></p>         
+        </div>
+        <div class="error"></div>
+        <button class="finish">Create Character</button>
+    </div>
+    <div class="finish-game">
+        <div>
+            <h1>Thank you for playing</h1>
+            <h2>for furhter information about me and my other projects</h2>
+            <a href="aleksandrebugadze.com" target="_blank">Visit my web-site</a>
+            <h2>OR</h2>
+            <button id="again">Play again</button>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,239 @@
+.game{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.victory-modal{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.8);
+    height: 100vh;
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    transition: all 0.2s;
+}
+.victory-modal p{
+    font-size: 100px;
+    padding: 20px 100px;
+    margin: 0;
+    text-align: center;
+}
+
+.grid{
+    display: none;
+    grid-template-columns: repeat(7,128px) ;
+    grid-template-rows: repeat(6,128px);
+    transition: all 0.2s;
+    transform: rotateX(-45deg) rotateZ(45deg);
+    transform-style: preserve-3d;
+    margin: 100px;
+    width: auto; 
+    height: auto;
+    margin-left: 200px;
+}
+
+
+.grid-div{
+    background-image:url("../assets/Art/high-ground-tile-2.png");
+    position: relative;
+    border: 1px solid #5d7680;   
+    background-color: #464459;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    transform: translateZ(0);
+    z-index: 2;  
+}
+
+img{
+    height: 128px;
+    width: 128px;
+    position: absolute;
+    z-index: 1;
+}
+
+
+.player{
+    object-fit: cover;
+    position: absolute;
+    background-image: url('/assets/Art/PlayerSheet.png');
+    background-repeat: no-repeat;
+    width: 128px;
+    height: 128px;
+    transform-style: preserve-3d;
+    z-index: 2;
+    background-size: 9000% 100%;
+}
+
+.enemy{
+    width: 128px;
+    height: 128px;
+    background-image: url("../assets/Art/Enemy-Sheet.png");
+    background-repeat: no-repeat;
+    transform-style: preserve-3d;
+    position: absolute;
+    z-index: 2;
+    background-size: cover;
+    background-size: 10100% 100%;
+}
+
+.boss{
+    width: 128px;
+    height: 128px;
+    background-image: url("../assets/Art/boss-proto-1.png");
+    background-repeat: no-repeat;
+    transform-style: preserve-3d;
+    position: absolute;
+    z-index: 2;
+    background-size: cover;
+    background-size: 1100% 100%;
+}
+
+.range{
+    width: 128px;
+    height: 128px;
+    background-image: url("../assets/Art/rangeEnemy-common-sheet.png");
+    background-repeat: no-repeat;
+    transform-style: preserve-3d;
+    position: absolute;
+    background-size: 1500% 100%;
+    z-index: 2;
+}
+
+
+.enemy .health{
+    display: none;
+}
+
+.health{
+    position: fixed;
+    top: 0;
+    color: white;
+    font-weight: bold;
+    background-color: #a52a2a;
+    width: 410px;
+    padding: 10px 0;
+    border:4px solid #464459;
+    text-align: center;
+    font-size: 30px;
+    transform: rotateX(45deg) rotateZ(-45deg);
+}
+
+
+
+.death-screen{
+    display: none;
+    background-color: black;
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.death{
+    font-size: 100px;
+    color: red;
+}
+
+
+@media (min-width:0px)and (max-width:541px) {
+    .game{
+        flex-direction: column;
+        gap: 0px;
+    }
+    .grid{
+        grid-template-columns: repeat(7,40px) ;
+        grid-template-rows: repeat(6,40px);
+        margin: 30px 0;
+    }
+    .div-container{
+        flex: 2;
+    }
+    img{
+        width: 40px;
+        height: 40px;
+    }
+    .enemy{
+        height: 40px;
+        width: 40px;
+    }
+    .player{
+        height: 40px;
+        width: 40px;
+    }
+    .victory-modal p{
+        font-size: 30px;
+        padding: 10px 50px;
+    }
+}
+
+@media (min-width:541px)and (max-width:1000px) {
+    .game{
+        flex-direction: column;
+        gap: 0px;
+    }
+    .grid{
+        grid-template-columns: repeat(7,64px) ;
+        grid-template-rows: repeat(6,64px);
+        margin: 30px 0;
+    }
+    .div-container{
+        flex: 2;
+    }
+    img{
+        width: 64px;
+        height: 64px;
+    }
+    .enemy{
+        height: 64px;
+        width: 64px;
+    }
+    .player{
+        height: 64px;
+        width: 64px;
+        
+    }
+    .victory-modal p{
+        font-size: 50px;
+        padding: 10px 100px;
+    }
+}
+
+@media (min-width:1001px)and (max-width:1800px) {
+    .game{
+        display: flex;
+        gap: 0px;
+    }
+    .grid{
+        grid-template-columns: repeat(7,64px) ;
+        grid-template-rows: repeat(6,64px);
+        margin: 30px 0;
+    }
+    .div-container{
+        flex: 2;
+        margin: 0 70px;
+    }
+    img{
+        width: 64px;
+        height: 64px;
+    }
+    .enemy{
+        height: 64px;
+        width: 64px;
+    }
+    .player{
+        height: 64px;
+        width: 64px;
+    }
+    .victory-modal p{
+        font-size: 50px;
+        padding: 10px 100px;
+    }
+}
