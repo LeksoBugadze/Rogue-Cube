@@ -83,8 +83,9 @@ export class Player{
         return this.#currentStamina;
     }
 
-    increaseDamage(param){
-        this.#damage+=param;
+    increaseMight(param){
+        this.#might+=param;
+        this.calcDmg();
         return this.#damage;
     }
 

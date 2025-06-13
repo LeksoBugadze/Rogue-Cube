@@ -5,8 +5,8 @@ export const itemArr=[
         id:1,
         img:'/assets/Art/sword.png',
         name:'Sword I',
-        description:'Increases damage by 10',
-        func:()=>player.increaseDamage(10),   
+        description:'Increases might by 10',
+        func:()=>player.increaseMight(10),   
        
     },
     {
@@ -36,8 +36,8 @@ export const itemArr=[
         id:5,
         img:'/assets/Art/sword-rare.png',
         name:'Sword II',
-        description:'Increases damage by 20',
-        func:()=>player.increaseDamage(20),   
+        description:'Increases might by 20',
+        func:()=>player.increaseMight(20),   
        
     },
     {
@@ -68,8 +68,8 @@ export const itemArr=[
         id:9,
         img:'/assets/Art/sword-mythic.png',
         name:'Sword III',
-        description:'Increases damage by 30',
-        func:()=>player.increaseDamage(30),   
+        description:'Increases might by 30',
+        func:()=>player.increaseMight(30),   
        
     },
     {
